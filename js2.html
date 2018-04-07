@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        div.body{
+            width: 800px;
+            height: 1000px;
+            margin: 0 auto;
+            padding-top: 10px;
+            padding-left: 10px;
+            background-color: gainsboro;
+        }
+    </style>
+    <script>
+        function calculate() {
+            var a, b, p, x,result;/*声明变量*/
+            /*从输入框获取变量的值*/
+            a=document.getElementById("a").value;
+            b=document.getElementById("b").value;
+            p=document.getElementById("p").value;
+            x=document.getElementById("x").value;
+            /*多级三目运算，先看最外面的比如（p>b)?(整体):值,再看那个整体*/
+            result=(p > b) ? ((p < x) ? (a + b + p) : (a - b - p)) : (x - p);
+            /*将result保存到id=result的输入框中去*/
+            document.getElementById("result").value=result;//注意不是innerHTML
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>多级三目运算</title>
+</head>
+<body>
+<div class="body">
+<p>声明变量a,b,p,x,代入(p>b)?((p&ltx<!--&lt表示小于符号-->
+    )?(a+b+p):(a-b-p)):(x-p);</p>
+<p>
+    a的值:<input type="text" id="a"/><br>
+    b的值:<input type="text" id="b"/><br>
+    p的值:<input type="text" id="p"/><br>
+    x的值:<input type="text" id="x"/></p>
+<!--调用calculate()函数-->
+<button type="button" onclick="calculate()">执行运算</button>
+<p>运算结果如下</p>
+<input type="text" id="result"/>
+</div>
+</body>
+</html>

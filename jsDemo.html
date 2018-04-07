@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>jsDemo</title>
+    <style>
+        #id1, #car {
+            width: 200px;
+            margin: 0 auto;
+            padding: 3px auto;
+            font-family: PostNetTt, "MS Gothic", sans-serif, 宋体, 黑体;
+            color: red;
+            border: 1px solid blue;
+        }
+
+        #id2 {
+            width: 134px;
+            height: 156px;
+            line-height: 1;
+            margin-left: 10px;
+            color: green;
+            /*border: 1px solid crimson;*/
+            background: url(img/1.jpg) -370px -285px no-repeat; /*定位图片的某一位置*/
+            display: table-cell;
+            text-align:match-parent;
+            vertical-align: bottom;
+        }
+
+        #ul ul li{
+
+            float: left;
+            /*display: inline;*/
+            list-style: none;/*去除小圆点*/
+
+        }
+        a {
+            width: 100px;
+            height: 50px;
+            text-decoration: none;/*去除下划线*/
+            font-size: 20px;
+            font-family: "Microsoft YaHei";
+            color: red;
+            background-color:gold ;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            border: 1px solid white;
+        }
+
+        a:visited: {
+            color: darkred;
+            background-color: cyan;
+            display: block;
+        }
+
+        a:hover {
+
+            background-color:goldenrod;
+            display: block;
+        }
+
+        a:active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="id1">id1的内容</div>
+<div id="id2">id2的内容</div>
+<p id="car">car的内容</p>
+<p id="plus"></p>
+<script>
+    var PI = 3.14, name = "张三", answer = "好的，马上就去", car = "volvo";
+    document.getElementById("id1").innerHTML = "<h2>这个是标题</h2>";
+    document.getElementById("id2").innerHTML = "<p>我们相爱到冰雪融化</p>";
+    document.write(PI + '</br>');
+    document.write(name + '</br>');
+    document.write(answer + '</br>');
+    document.getElementById('car').innerHTML = car;
+    function Engineer(name,job) {
+        alert('hello ,'+name+',the '+job+'!')
+    }
+    function compute(a,b) {
+
+        if(a>b){
+           x= a-b;
+           document.getElementById("plus").innerHTML=x;
+        }else{
+       x=a+b;
+            document.getElementById("plus").innerHTML=x;
+        }
+    }
+</script>
+<button type="button" onclick="Engineer('Amau','IT Engineer')">click me</button>
+<button type="button" onclick="compute(18,23)">执行减运算</button>
+<button type="button" onclick="compute(12,7)">执行加运算</button>
+<div id="ul">
+<ul>
+    <li>
+<a href="#h" target="_blank">这是链接</a>
+    </li>
+    <li>
+        <a  href="#h" target="_blank">这是链接</a>
+    </li>
+      <li> <a  href="#h" target="_blank">这是链接</a>
+    </li>
+</ul>
+</div>
+</body>
+</html>
