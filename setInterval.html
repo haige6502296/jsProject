@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    /*不大于5秒的随机时间，Math.floor()将小数变为整数*/
+        var change=setInterval(setColor,Math.floor(Math.random()*5000));
+        function setColor() {
+            var x=document.body;
+            /*随机颜色背景，随机透明度*/
+            x.style.backgroundColor='rgba('+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+','
+                +Math.floor(Math.random()*255)+','+Math.floor(Math.random()*100)+')'
+        }
+        function stopChange() {
+            clearInterval(change);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>change the background color of html</title>
+</head>
+<body>
+<button type="button" onclick="setColor()">动态背景</button>
+<button type="button" onclick="stopChange()">停止变换</button>
+</body>
+</html>
