@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>say hello in different time</title>
+    <script>
+        function hello() {
+            var hello;
+            var x = "";
+            var time = new Date().getHours();
+            hello = (time >= 0 && time < 18) ? (time < 12 ? "Good Morning!" : "Good Afternoon!") : "Good Evening!";
+            setInterval(new Date(),1000);
+            document.getElementById("hello").innerHTML = hello;
+        }
+
+        function switch_demo() {
+            var n;
+
+            /*一定注意从input框获取的值是字符串，使用switch时必须转换成对应的数据类型，如果不转换，case后面的类型也应该是String,
+            * 否则必须使用parseInt方法将结果转换为number*/
+            n = /*parseInt(*/document.getElementById("number").value/*)*/;
+            document.write("n的值：" + n + "<br>");
+            document.write("n的数据类型：" + typeof (n) + "<br>");
+
+            /*switch示例*/
+            switch (n) {
+                case '0':
+                    document.write("今天是星期日");
+                    break;
+                case '1':
+                    document.write("今天是星期一");
+                    break;
+                case '2':
+                    document.write("今天是星期二");
+                    break;
+                case '3':
+                    document.write("今天是星期三");
+                    break;
+                case '4':
+                    document.write("今天是星期四");
+                    break;
+                case '5':
+                    ("今天是星期五");
+                    break;
+                case '6':
+                    ("今天是星期六");
+                    break;
+                default:
+                    alert("请输入0-7以内的整数!")
+            }
+
+        }
+    </script>
+</head>
+<body>
+Click the button to get the greetings!<br><!--提示内容-->
+<button type="button" onclick="(hello())">Greetings</button><!--问候按钮-->
+<p id="hello"></p><br><!--问候输出-->
+<input type="text" id="number"><br><!--输入框-->
+<button type="button" onclick="switch_demo()">switch</button><!--按钮-->
+<br>
+<p id="week"></p><!--星期输出内容-->
+test
+</body>
+</html>
