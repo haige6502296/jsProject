@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number to String auto</title>
+</head>
+<body>
+<script>
+    function getTime() {
+        let weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+        let time = new Date();
+        let year = time.getFullYear();
+        let month = time.getMonth();
+        let date = time.getDate();
+        let week = time.getDay();
+        let hour = time.getHours();
+        let minute = time.getMinutes();
+        let second = time.getSeconds();
+        document.getElementById("time").innerHTML =year + "年" + month + "月" + date + "日" +
+            " " + hour + ":" + minute + ":" + second + " " + weekday[week];
+    }
+</script>
+<!--输出时间-->
+<button type="button" onclick="getTime()">显示时间</button>
+<br>
+现在时间是： <div id="time"></div>
+</body>
+</html>
