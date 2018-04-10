@@ -8,10 +8,15 @@
 <p>判断是否为数组</p>
 <p id="fruits"></p>
 <script>
+    let numStr = '2016';
     var fruits=['banana', 'Orange','Apple','Mango']
     document.getElementById("fruits").innerHTML=isArray(fruits);//调用方法输出结果true or false
     function isArray(myArray) {
-        return myArray.constructor.toString().indexOf("Array")>-1;/*判断是否为数组*/
+        return myArray.constructor.toString().indexOf("Array")>-1;/*判断是否为数组
+        myArray（实际的数据对象）,其constructor()方法会返回响应的类型比如(3.14).constructor=>Number()
+        Number().toString=>"Number()"字符串，那么"Number()"这个字符串匹配indexOf("Number"),返回结果是0
+        所以变成0>-1,结果为真，true.
+        */
     }
 </script>
 </body>
