@@ -6,20 +6,21 @@
 </head>
 <body>
 <script>
-var x="It\'s alright";
-var chx=x[3];
-var y='He is called \"Johnny\"';
-var chy=y[13];
+    /*注意转义字符"/"的使用方法，放在可能产生分歧的引号前面*/
+let x="It\'s alright！";
+let chx=x[3];
+let y='  He is called \"Johnny\"';
+let chy=y[13];
 document.getElementById("string").innerHTML=x+"<br>"+y+"<br>" +
     "chx(x[3]为："+chx+"<br>"+"chy(y[13])为："+chy+"<br>"+"x.length:"+
     x.length+"<br>"+"y.length:"+y.length;
 function concat() {
-  var z= x.concat(y);
+  let z= x.concat(y);
    alert("使用字符串的concat()方法："+"\n即x.concat(y)结果"+z);
 
 }
 function f99(x1,y1) {
-    var z1=x1+y1;
+    let z1=x1+y1;
     alert(z1);
 }
 </script>
