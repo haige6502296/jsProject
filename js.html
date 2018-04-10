@@ -8,25 +8,20 @@
 <script>
     /*注意转义字符"/"的使用方法，放在可能产生分歧的引号前面*/
 let x="It\'s alright！";
-let chx=x[3];
 let y='  He is called \"Johnny\"';
-let chy=y[13];
-document.getElementById("string").innerHTML=x+"<br>"+y+"<br>" +
-    "chx(x[3]为："+chx+"<br>"+"chy(y[13])为："+chy+"<br>"+"x.length:"+
-    x.length+"<br>"+"y.length:"+y.length;
 function concat() {
   let z= x.concat(y);
    alert("使用字符串的concat()方法："+"\n即x.concat(y)结果"+z);
 
 }
-function f99(x1,y1) {
-    let z1=x1+y1;
+
+function f99(x1, y1) {
+    let z1;
+    z1=x1+y1;
     alert(z1);
 }
 </script>
 <button type="button" onclick="concat()">concat</button>
 <button type="button" onclick="f99(7,8)">plus(x+y)</button>
-
-test
 </body>
 </html>
