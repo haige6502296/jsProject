@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regex2</title>
+</head>
+<body>
+<p>替换"Amau"为 "Avandor"</p>
+<!--点击一次只能替换一次-->
+<button type="button" onclick="myFunction()">单次替换</button>
+<button type="button" onclick="myFunction2()">批量替换</button>
+<p id="demo">你好,我是“Amau”,我是“Amau”</p>
+<script>
+    function myFunction(){
+        let str=document.getElementById("demo").innerHTML;
+        let txt=str.replace("Amau","Avandor");
+        document.getElementById("demo").innerHTML=txt;
+    }
+    function myFunction2() {
+        let str=document.getElementById("demo").innerHTML;
+        let reg=new RegExp("Amau","g");/*g表示全局匹配，
+        执行了第一次匹配后继续执行下一次匹配*/
+        let replace=str.replace(reg,"Avandor");
+        document.getElementById("demo").innerHTML=replace;
+    }
+</script>
+</body>
+</html>
