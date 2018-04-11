@@ -9,7 +9,26 @@
     let str1="js其实蛮简单的";
     let n=str1.search(/的/i);
     document.write(n);
+
+
+    /*获取本html内容的文本文件后替换some*/
+    function replace_show() {
+    let txt=document.getElementById("txt").innerHTML;/*text此时为字符串*/
+    let replace_test=txt.replace(/some/i,"little");
+    document.getElementById("txt").innerHTML=replace_test;
+    }
 </script>
 <p id="n"></p>
+<div id="txt">
+    There are some simple texts!
+    There are some simple texts!
+    There are some simple texts!
+    There are some simple texts!
+    There are some simple texts!
+    There are some simple texts!
+    There are some simple texts!
+    There are some simple texts!
+</div>
+<button type="button" onclick="replace_show()">some替换</button>
 </body>
 </html>
