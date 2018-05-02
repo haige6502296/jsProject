@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JSError</title>
+    <script>
+       function myfunction() {
+           let msg,x;
+           msg=document.getElementById("message");
+           msg.innerHTML="";
+           x=document.getElementById("demo").value;
+           try{
+               if(x=="") throw  "值不能为空!";
+               if(isNaN(x)) throw "不是数字！";
+               x=Number(x);
+               if (x<5) throw "太小";
+               if(x>10) throw  "太大";
+           }catch (e) {
+               msg.innerHTML="错误："+e;
+           }
+       }
+    </script>
+</head>
+<body>
+<input type="text" id="demo">
+<button type="button" onclick="myfunction()">输入值</button>
+<p id="message"></p>
+</body>
+</html>

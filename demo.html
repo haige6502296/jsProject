@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let reg=/[abc]/g;//匹配abc中任意字符
+   let reg2=/[abc.]/g;
+   let reg3=/[abc\.]/g;
+   let reg4=/[^abc]/g;
+
+   let str='a1b2c3';
+   let str2='a1b2c3d.';
+   let str3='abcWOR';
+   let res=str.replace(reg,'X');//x1x2x3
+   let res2=str2.replace(reg2,'X');//x1x2x3dx
+   let res3=str2.replace(reg3,'X');//x1x2x3dx
+   let res4=str3.replace(reg4,'Z');
+   console.log(res);//x1x2x3
+   console.log(res2)//x1x2x3dx
+   console.log(res3);//x1x2x3dx
+    console.log(res4);
+</script>
+</body>
+</html>
